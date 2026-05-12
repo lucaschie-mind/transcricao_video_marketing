@@ -2,7 +2,7 @@
 nixPkgs = ["ffmpeg", "python311", "python311Packages.pip"]
 
 [phases.install]
-cmds = ["pip install -r requirements.txt"]
+cmds = ["pip install -r requirements.txt --break-system-packages"]
 
 [start]
 cmd = "streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
